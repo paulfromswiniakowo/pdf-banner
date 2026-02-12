@@ -175,14 +175,12 @@ deno run --allow-all main.ts \
 ```
 pdf-banner/
 ├── main.ts                          # Main application file
+├── test.ts                          # Test suite
 ├── deno.json                        # Deno configuration and dependencies
 ├── deno.lock                        # Locked dependencies
 ├── DejaVuSansCondensed-Bold.ttf     # Custom font file
-├── AI_RULES.md                      # Development guidelines and algorithms
-├── README.md                        # This file
-└── .vscode/                         # VS Code configuration
-    ├── launch.json
-    └── settings.json
+├── LICENSE                          # MIT license
+└── README.md                        # This file
 ```
 
 ### Testing
