@@ -179,8 +179,12 @@ pdf-banner/
 ├── deno.json                        # Deno configuration and dependencies
 ├── deno.lock                        # Locked dependencies
 ├── DejaVuSansCondensed-Bold.ttf     # Custom font file
+├── AI_RULES.md                      # Development guidelines and algorithms
 ├── LICENSE                          # MIT license
-└── README.md                        # This file
+├── README.md                        # This file
+└── .vscode/                         # VS Code configuration
+    ├── launch.json
+    └── settings.json
 ```
 
 ### Testing
