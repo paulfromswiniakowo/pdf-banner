@@ -1,0 +1,117 @@
+{
+  "version": "5",
+  "specifiers": {
+    "jsr:@cliffy/ansi@1.0.0-rc.4": "1.0.0-rc.4",
+    "jsr:@cliffy/command@1.0.0-rc.4": "1.0.0-rc.4",
+    "jsr:@cliffy/flags@1.0.0-rc.4": "1.0.0-rc.4",
+    "jsr:@cliffy/table@1.0.0-rc.4": "1.0.0-rc.4",
+    "jsr:@std/assert@0.221": "0.221.0",
+    "jsr:@std/console@0.221": "0.221.0",
+    "jsr:@std/encoding@0.221": "0.221.0",
+    "jsr:@std/fmt@0.221": "0.221.0",
+    "jsr:@std/io@0.221": "0.221.0",
+    "jsr:@std/text@0.221": "0.221.0",
+    "npm:@pdf-lib/fontkit@*": "1.1.1",
+    "npm:@pdf-lib/fontkit@^1.1.1": "1.1.1",
+    "npm:pdf-lib@*": "1.17.1",
+    "npm:pdf-lib@^1.17.1": "1.17.1"
+  },
+  "jsr": {
+    "@cliffy/ansi@1.0.0-rc.4": {
+      "integrity": "df561b6a69bb5177c31618c027274504ed24b996b854fa072eb7d0a380e41ac1",
+      "dependencies": [
+        "jsr:@std/encoding",
+        "jsr:@std/fmt",
+        "jsr:@std/io"
+      ]
+    },
+    "@cliffy/command@1.0.0-rc.4": {
+      "integrity": "709884ffe0f53ce3edafa92b58223634397878fbf6dcabe0c74ea0108273b9f7",
+      "dependencies": [
+        "jsr:@cliffy/flags",
+        "jsr:@cliffy/table",
+        "jsr:@std/fmt",
+        "jsr:@std/text"
+      ]
+    },
+    "@cliffy/flags@1.0.0-rc.4": {
+      "integrity": "29f370ade4ddf6e150a4d25fc44661234c19870ffcf7fb07cd100f1843fcd6e1",
+      "dependencies": [
+        "jsr:@std/text"
+      ]
+    },
+    "@cliffy/table@1.0.0-rc.4": {
+      "integrity": "990e4e0b3910e6c9cf7a5b4318b8f5e121cf681494c94fd113febb9b4d4c0741",
+      "dependencies": [
+        "jsr:@std/console",
+        "jsr:@std/fmt"
+      ]
+    },
+    "@std/assert@0.221.0": {
+      "integrity": "a5f1aa6e7909dbea271754fd4ab3f4e687aeff4873b4cef9a320af813adb489a"
+    },
+    "@std/console@0.221.0": {
+      "integrity": "8f2afc1f3f14f5d6039c0c767f057e4aa1897d2210e167c4667cb155cafb9d11",
+      "dependencies": [
+        "jsr:@std/assert"
+      ]
+    },
+    "@std/encoding@0.221.0": {
+      "integrity": "d1dd76ef0dc5d14088411e6dc1dede53bf8308c95d1537df1214c97137208e45"
+    },
+    "@std/fmt@0.221.0": {
+      "integrity": "379fed69bdd9731110f26b9085aeb740606b20428ce6af31ef6bd45ef8efa62a"
+    },
+    "@std/io@0.221.0": {
+      "integrity": "faf7f8700d46ab527fa05cc6167f4b97701a06c413024431c6b4d207caa010da"
+    },
+    "@std/text@0.221.0": {
+      "integrity": "a2f89ceb0d8851cd33e6774064621a1da9fbc36578cf4f02c5b5bcd7e8c84b67",
+      "dependencies": [
+        "jsr:@std/assert"
+      ]
+    }
+  },
+  "npm": {
+    "@pdf-lib/fontkit@1.1.1": {
+      "integrity": "sha512-KjMd7grNapIWS/Dm0gvfHEilSyAmeLvrEGVcqLGi0VYebuqqzTbgF29efCx7tvx+IEbG3zQciRSWl3GkUSvjZg==",
+      "dependencies": [
+        "pako"
+      ]
+    },
+    "@pdf-lib/standard-fonts@1.0.0": {
+      "integrity": "sha512-hU30BK9IUN/su0Mn9VdlVKsWBS6GyhVfqjwl1FjZN4TxP6cCw0jP2w7V3Hf5uX7M0AZJ16vey9yE0ny7Sa59ZA==",
+      "dependencies": [
+        "pako"
+      ]
+    },
+    "@pdf-lib/upng@1.0.1": {
+      "integrity": "sha512-dQK2FUMQtowVP00mtIksrlZhdFXQZPC+taih1q4CvPZ5vqdxR/LKBaFg0oAfzd1GlHZXXSPdQfzQnt+ViGvEIQ==",
+      "dependencies": [
+        "pako"
+      ]
+    },
+    "pako@1.0.11": {
+      "integrity": "sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw=="
+    },
+    "pdf-lib@1.17.1": {
+      "integrity": "sha512-V/mpyJAoTsN4cnP31vc0wfNA1+p20evqqnap0KLoRUN0Yk/p3wN52DOEsL4oBFcLdb76hlpKPtzJIgo67j/XLw==",
+      "dependencies": [
+        "@pdf-lib/standard-fonts",
+        "@pdf-lib/upng",
+        "pako",
+        "tslib"
+      ]
+    },
+    "tslib@1.14.1": {
+      "integrity": "sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg=="
+    }
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@cliffy/ansi@1.0.0-rc.4",
+      "jsr:@cliffy/command@1.0.0-rc.4",
+      "jsr:@cliffy/table@1.0.0-rc.4"
+    ]
+  }
+}
