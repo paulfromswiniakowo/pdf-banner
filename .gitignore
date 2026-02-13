@@ -5,8 +5,13 @@
 # Deno cache
 .deno/
 
-# Node modules (if using npm packages)
+# Node modules
 node_modules/
+
+# Temporary files
+*.tmp
+*.temp
+*~
 
 # IDE files
 .idea/
@@ -20,11 +25,6 @@ Thumbs.db
 # Log files
 *.log
 
-# Temporary files
-*.tmp
-*.temp
-*~
-
 # Build artifacts
 dist/
 build/
@@ -33,3 +33,4 @@ build/
 .vscode/
 .helix/
 WARP.md
+AGENTS.md
