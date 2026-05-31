@@ -32,5 +32,11 @@ build/
 # Other
 .vscode/
 .helix/
-WARP.md
 AGENTS.md
+
+# AI / Agent memory
+.cursor/
+.clinerules
+.cursorrules
+AGENTS.md
+WARP.md

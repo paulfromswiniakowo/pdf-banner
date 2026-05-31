@@ -78,23 +78,6 @@ async function runTest(testCase: TestCase): Promise<boolean> {
   console.log(`   ${testCase.description}`);
   
   try {
-    // Import and run the main function
-    const { generatePDF } = await import('./main.ts');
-    
-    // Parse arguments to extract options
-    const text = testCase.args[testCase.args.indexOf('--text') + 1];
-    const output = testCase.args[testCase.args.indexOf('--output') + 1];
-    const width = testCase.args.includes('--width') ? 
-      parseInt(testCase.args[testCase.args.indexOf('--width') + 1]) : 1000;
-    const height = testCase.args.includes('--height') ? 
-      parseInt(testCase.args[testCase.args.indexOf('--height') + 1]) : 700;
-    const fontSize = testCase.args.includes('--font-size') ? 
-      parseInt(testCase.args[testCase.args.indexOf('--font-size') + 1]) : 25;
-    const fg = testCase.args.includes('--fg') ? 
-      testCase.args[testCase.args.indexOf('--fg') + 1] : 'black';
-    const bg = testCase.args.includes('--bg') ? 
-      testCase.args[testCase.args.indexOf('--bg') + 1] : 'yellow';
-    
     // Run the generation
     console.log(`   Command: deno run --allow-all main.ts ${testCase.args.join(' ')}`);
     
@@ -105,7 +88,7 @@ async function runTest(testCase: TestCase): Promise<boolean> {
       cwd: Deno.cwd(),
     });
     
-    const { code, stdout, stderr } = await process.output();
+    const { code, stderr } = await process.output();
     
     if (code === 0) {
       // Check if output file exists
@@ -127,8 +110,9 @@ async function runTest(testCase: TestCase): Promise<boolean> {
       console.log(`   Error: ${errorOutput}`);
       return false;
     }
-  } catch (error) {
-    console.log(`   ❌ Failed: ${error.message}`);
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : String(error);
+    console.log(`   ❌ Failed: ${message}`);
     return false;
   }
   

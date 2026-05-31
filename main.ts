@@ -49,7 +49,7 @@ function getColor(colorName: string) {
 /**
  * Funkcja generująca PDF dla banerów PVC
  */
-async function generatePDF(
+export async function generatePDF(
   text: string, 
   outputFile: string, 
   widthMm: number,
